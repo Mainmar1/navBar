@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div className="navbar navbar-inverse navbar-fixed-top">
       <div>
-        <p>Logo</p>
+        <p className="navbar-brand">eCommerce</p>
       </div>
       <ul className="nav navbar-nav">
         <li>

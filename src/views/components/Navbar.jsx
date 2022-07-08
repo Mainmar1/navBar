@@ -1,10 +1,12 @@
 import React from "react";
 import "./_navbar.css";
+import CartWidget from "./cartWidget/CartWidget";
 
 function Navbar() {
   return (
     <div className="navbar navbar-inverse navbar-fixed-top">
-      <div>
+      <div className="navbar-inner">
+        <CartWidget />
         <p className="navbar-brand">eCommerce</p>
       </div>
       <ul className="nav navbar-nav">

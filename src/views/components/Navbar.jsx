@@ -1,6 +1,5 @@
 import React from "react";
 import "./_navbar.css";
-import ItemCount from "./itemCount/itemCount";
 import CartWidget from "./cartWidget/CartWidget";
 
 function Navbar() {
@@ -23,7 +22,6 @@ function Navbar() {
         <li>
           <a href="#">Account</a>
         </li>
-        <ItemCount />
       </ul>
     </div>
   );

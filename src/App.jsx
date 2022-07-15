@@ -1,5 +1,7 @@
 // import image1 from "./";
+
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemListContainer } from "./views/components/ItemListContainer/ListContainer";
 import Navbar from "./views/components/Navbar";
 

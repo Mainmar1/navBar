@@ -1,31 +1,32 @@
 import React, { useState } from "react";
 
-const ItemCount = () => {
-  const [contador, actualizarContador] = useState(0);
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
-  //   console.log(estado);
-
-  //   let cont = 0;
-
-  const aumentar = () => {
-    actualizarContador(contador + 1);
+  const suma = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    } else {
+      alert(`stock maximo`);
+    }
   };
-
-  const styles = {
-    Width: "15px",
-    Height: "15px",
-    border: "1px solid black",
-    borderRadius: "15px",
-    padding: "7px",
-    margin: "5px",
+  const resta = () => {
+    if (count > initial) {
+      setCount(count - 1);
+    } else {
+      alert(`compra minima: ${initial}`);
+    }
   };
-
+  const reset = () => {
+    setCount(initial);
+  };
   return (
     <div>
-      {contador}
-      <buttonc style={styles} onClick={aumentar}>
-        Aumentar
-      </buttonc>
+      <h1>{count}</h1>
+      <button onClick={suma}>+</button>
+      <button onClick={resta}>-</button>
+      <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+      <button onClick={reset}>reset</button>
     </div>
   );
 };

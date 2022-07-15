@@ -1,22 +1,21 @@
-// import React, { useEffect } from "react";
+import ItemCount from "../itemCount/ItemCount";
 
 export const ItemListContainer = ({ greeting }) => {
-  // const getFetch = () => {
-  //   fetch("https://asia-east1-run.googleapis.com")
-  //     .then((res) => {
-  //       res.json();
-  //     })
-  //     .then((respuesta) => console.log(respuesta))
-  //     .catch((error) => console.log(error));
-  // };
-
-  // useEffect(() => {
-  //   getFetch();
-  // }, []);
+  const onAdd = (count) => {
+    alert("Compraste:" + count);
+  };
 
   const styles = {
-    backgroundColor: "black",
+    backgroundColor: "Grey",
     color: "white",
   };
-  return <div style={styles}> {greeting} </div>;
+
+  return (
+    <div style={styles}>
+      {" "}
+      {greeting} <ItemCount initial={1} stock={10} onAdd={onAdd} />{" "}
+    </div>
+  );
 };
+
+export default ItemListContainer;
